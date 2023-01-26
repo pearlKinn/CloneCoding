@@ -1,3 +1,6 @@
+/** 
+ * 검색창 제어
+ */
 //검색창 요소 (.search) 찾기.
 const searchEl = document.querySelector('.search');
 const searchInputEl = searchEl.querySelector('input');
@@ -15,6 +18,9 @@ searchInputEl.addEventListener('blur', function () {
     searchEl.classList.remove('focused');
     searchInputEl.setAttribute('placeholder', '');
 });
+/** 
+ * 페이지 스크롤에 따른 요소 제어
+ */
 // 페이지 스코롤에 따른 요소 제어 
 const badgeEl = document.querySelector('header .badges');
 
@@ -34,3 +40,12 @@ window.addEventListener('scroll', function () {
         });
     }
 });
+//나타날 요소(.fade-in)들을 찾기
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+//요소들을 하나씩 반복해서 처리
+fadeEls.forEach(function (fadeEl, index) {
+    gsap.to(fadeEl, 1, {
+        delay: (index + 1) * .7,
+        opacity: 1
+    });
+}); 

@@ -16,6 +16,55 @@ img {
     margin: 0 auto;
     position: relative;
 }
+.btn {
+    width: 130px;
+    padding: 10px;
+    display: block;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    transition: .4s;
+}
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+.btn.btn--reverse {
+    background-color: #333;
+    color: #fff;
+}
+.btn.btn--reverse:hover {
+    background-color: transparent;
+    color: #333;
+}
+.btn.btn--brown {
+    color: #592b18;
+}
+.btn.btn--brown:hover {
+    color: #fff;
+    background-color: #592b18;
+}
+.btn.btn--gold {
+    color: #d9aa8a;
+    border-color: #d9aa8a;
+}
+.btn.btn--gold:hover {
+    color: #fff;
+    background-color: #d9aa8a;
+}
+.btn.btn--white {
+    color: #fff;
+    border-color: #fff;
+}
+.btn.btn--white:hover {
+    color: #333;
+    background-color: #fff;
+}
 /* HEADER */
 header {
  background-color: #f6f5f0;
@@ -177,4 +226,51 @@ header .badges .badge {
     box-shadow: 4px 4px 10px rgba(0,0,0,.15);
     cursor: pointer;
     overflow: hidden;
+}
+/* VISUAL */
+.visual {
+    background-image: url("../images/visual_bg.jpg");
+    background-position: center;
+    margin-top: 120px;
+}
+.visual .inner {
+    height: 646px;
+}
+.visual .title {
+    position: absolute;
+    top: 40px;
+    left: -10px;
+}
+.visual .title .btn {
+    position: absolute;
+    top: 230px;
+    left: 148px;
+}
+.visual .cup1.image {
+    position: absolute;
+    bottom: 0;
+    right: -47px;
+}
+.visual .cup1.text {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+}
+.visual .cup2.image {
+    position: absolute;
+    bottom: 0;
+    right: 162px;
+}
+.visual .cup2.text {
+    position: absolute;
+    top: 186px;
+    right: 412px;
+}
+.visual .spoon {
+    position: absolute;
+    bottom: 0;
+    left: 275px;
+}
+.visual .fade-in {
+    opacity: 0;
 }
