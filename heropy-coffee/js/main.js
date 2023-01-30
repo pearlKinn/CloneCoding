@@ -83,3 +83,25 @@ new Swiper('.promotion .swiper', {
         promotionEl.classList.add('hide');
     }
   });
+
+  gsap.to('.floating1', 1.5, {
+    delay: 1,
+    y: 15, // `transform: translateY(수치);`와 같음. 수직으로 얼마나 움직일지 설정.
+    repeat: -1, //-1은 무한 반복.
+    yoyo: true, //한번 재생된 애니메이션을 다시 뒤로 재생.
+    ease: Power1.easeInOut //Easing 함수적용.
+  });
+  gsap.to('.floating2', 2, {
+    delay: .5,
+    y: 15, // `transform: translateY(수치);`와 같음. 수직으로 얼마나 움직일지 설정.
+    repeat: -1, //-1은 무한 반복.
+    yoyo: true, //한번 재생된 애니메이션을 다시 뒤로 재생.
+    ease: Power1.easeInOut //Easing 함수적용.
+  });
+  gsap.to('.floating3', 2.5, {
+    delay: 1.5,
+    y: 20, // `transform: translateY(수치);`와 같음. 수직으로 얼마나 움직일지 설정.
+    repeat: -1, //-1은 무한 반복.
+    yoyo: true, //한번 재생된 애니메이션을 다시 뒤로 재생.
+    ease: Power1.easeInOut //Easing 함수적용.
+  });
