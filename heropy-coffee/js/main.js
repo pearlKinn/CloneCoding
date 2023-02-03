@@ -105,3 +105,14 @@ new Swiper('.promotion .swiper', {
     yoyo: true, //한번 재생된 애니메이션을 다시 뒤로 재생.
     ease: Power1.easeInOut //Easing 함수적용.
   });
+  
+  const spyEl = document.querySelectorAll('section.scroll-spy');
+  spyEl.forEach(function (spyEl) {
+    new ScrollMagic
+    .Scene({//감시할 장면(Scene)을 추가
+        triggerElement:spyEl, //보여짐 여부를 감시할 요소를 지정
+        triggerHook: .8 //회면의 80% 지점에서 보여짐 감시
+    })
+    .setClassToggle(spyEl, 'show') //요소가 화면에 보이면 show 클래스 추가
+    .addTo(new ScrollMagic.Controller()); //컨트롤러에 장면을 할당 (필수)
+  });
