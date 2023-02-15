@@ -694,3 +694,35 @@ header .badges .badge {
 .find-store .text-group .description {
     margin-bottom: 20px;
 }
+/*AWARDS*/
+.awards {
+    background-color: #272727;
+}
+.awards .inner {
+    padding: 40px 0;
+}
+.awards .swiper-button-prev,
+.awards .swiper-button-next {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    opacity: .3;
+}
+.awards .swiper-button-prev {
+    left: -100px;
+}
+.awards .swiper-button-next {
+    right: -100px;  
+}
+.awards .swiper-button-prev:hover,
+.awards .swiper-button-next:hover {
+    background-color: #fff;
+    color: #333;
+}
+.awards .swiper-button-prev::after,
+.awards .swiper-button-next::after {
+    display: none;
+}
