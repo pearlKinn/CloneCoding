@@ -66,6 +66,24 @@ img {
     color: #333;
     background-color: #fff;
 }
+/* BACK TO POSITION */
+ .back-to-position {
+    opacity: 0;
+    transition-duration: 1s;
+}
+.back-to-position.to-left {
+    transform: translateX(150px);
+}
+.back-to-position.to-right {
+    transform: translateX(-150px);
+}
+.show .back-to-position { /* show의 하위요소에서는 투명해지지 않고 원래 위치로 돌아옴 */
+    opacity: 1;
+    transform: translateX(0);
+}
+.show .back-to-position.delay-1 { transition-delay: .3s; }
+.show .back-to-position.delay-2 { transition-delay: .6s; }
+.show .back-to-position.delay-3 { transition-delay: .9s; }
 
 /* HEADER */
 header {
@@ -575,6 +593,10 @@ header .badges .badge {
 /* PICK YOUR FAVORITE */
 .pick-your-favorite {
     background-image: url("../images/favorite_bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .pick-your-favorite .inner {
     padding: 110px 0;
